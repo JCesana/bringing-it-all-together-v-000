@@ -61,11 +61,13 @@ class Dog
   
   def self.find_or_create_by(name:, breed:)
     dog = "SELECT * FROM dogs WHERE name = ? AND breed = ?;"
-    
+    binding.pry 
     if !dog.empty?
+      binding.pry 
       dog_data = dog[0]
       dog = Dog.new(dog_data[0], dog_data[1], dog_data[2])
     else 
+      binding.pry 
       dog = self.create(name: name, breed: breed)
     end 
   end 
