@@ -81,7 +81,7 @@ class Dog
       LIMIT 1;
     SQL
     
-    row = DB[:conn].execute(sql, name)
+    row = DB[:conn].execute(sql, name)[0]
     binding.pry
     dog = Dog.new(id: row[0], name: row[1], breed: row[2])
   end 
