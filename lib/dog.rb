@@ -63,7 +63,7 @@ class Dog
     sql = <<-SQL 
       SELECT *
       FROM dogs 
-      WHERE name = ?, breed = ?;
+      WHERE name = ? AND breed = ?;
     SQL
   end 
   
