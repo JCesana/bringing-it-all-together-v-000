@@ -59,11 +59,11 @@ class Dog
     dog = Dog.new(id: row[0], name: row[1], breed: row[2])
   end 
   
-  def self.find_or_create_by
+  def self.find_or_create_by(name:, breed:)
     sql = <<-SQL 
       SELECT *
       FROM dogs 
-      WHERE id = ?;
+      WHERE name = ?, breed = ?;
     SQL
   end 
   
