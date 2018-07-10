@@ -63,6 +63,7 @@ class Dog
     dog = "SELECT * FROM dogs WHERE name = ? AND breed = ?;"
     
     if !dog.empty?
+      dog_data = dog[0]
       
     else 
       
